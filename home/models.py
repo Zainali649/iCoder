@@ -9,5 +9,7 @@ class Contact(models.Model):
     content = models.TextField()
     timeStamp = models.DateTimeField(auto_now_add=True, blank=True)
 
+    class Meta:
+        db_table = 'contact'
     def __str__(self):
         return 'Message from ' + self.name + ' - ' + self.email
